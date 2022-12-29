@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--Light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: var(--Light-grayish-blue);
+    font-weight: 500;
+}
+p{
+    font-weight: 600;
+    color: rgb(165, 162, 162);
+    line-height: 20px;
+}
+
+.cont-testimonios {
+    padding: 10px;
+    width: 85%;
+    min-height: 90vh;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "header header header advert content"
+        "footer algo algo algo content";
+    grid-gap: 20px;
+}
+
+.testimonio1, .testimonio2, .testimonio3, .testimonio4, 
+.testimonio5{
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.encabezado{
+    display: flex;
+    align-items: center;
+}
+#img-persona{
+    border-radius: 50%;
+    border: 2px solid lightgray;
+    margin-right: 20px;
+}
+.persona{
+    color: var(--Light-gray);
+    font-weight: 600;
+}
+.persona h4{
+    font-weight: 500;
+}
+.nombre, .titulo{
+    color: var(--Very-dark-grayish-blue);
+}
+
+.testimonio1 {
+    background-color: var(--Moderate-violet);
+    grid-area: header;
+}
+
+.testimonio2 {
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: advert;
+}
+
+.testimonio3 {
+    background-color: var(--White);
+    grid-area: content;
+}
+
+.testimonio4 {
+    background-color: var(--White);
+    grid-area: footer;
+}
+
+.testimonio5 {
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: algo;
+}
+
+@media (max-width: 375px){
+    .cont-testimonios{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        min-height: 200vh;
+        grid-template-areas:
+        "header"
+        "advert"
+        "footer"
+        "algo"
+        "content";
+    }
+    .testimonio1{
+        height: 450px;
+    }
+    .testimonio2{
+        height: 250px;
+    }
+    .testimonio3{
+        height: 600px;
+    }
+    .testimonio4{
+        height: 300px;
+    }
+    .testimonio5{
+        height: 400px;
+    }
+}
